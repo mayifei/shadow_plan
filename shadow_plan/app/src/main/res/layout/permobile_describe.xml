@@ -18,7 +18,8 @@
     <TextView
         android:id="@+id/permobile_describe_pic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_text"/>
 
     <LinearLayout
         android:id="@+id/permobile_describe_body_one"
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/permobile_describe_pic"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="300dp"
         android:layout_marginLeft="@dimen/edit_data_margin_border"
         android:layout_marginRight="@dimen/edit_data_margin_border">
 
