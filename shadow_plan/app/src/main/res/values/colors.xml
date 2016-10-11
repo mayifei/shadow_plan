@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f0f7f7f8</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--标题颜色 -->
+    <color name="title_text_normal_color">#2dbd5d</color>
+    <!--默认背景颜色 -->
+    <color name="background_default_color">#ffffff</color>
+    <!-- editview默认hint文字颜色 -->
+    <color name="text_hint_color">#4d000000</color>
+    <!-- editview文字颜色 -->
+    <color name="text_edit_color">#e6000000</color>
+    <!-- 普通button中文字的颜色 -->
+    <color name="text_normal_color">#ffffff</color>
+    <!-- 头部为图片,下方有文字的,文字颜色 -->
+    <color name="top_image_with_text_normal_color">#b3000000</color>
+</resources>

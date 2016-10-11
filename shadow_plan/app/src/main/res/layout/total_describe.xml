@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default_color">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/title_text_margin_top"
+        android:text="@string/total_data"
+        android:textColor="@color/title_text_normal_color"
+        android:textSize="@dimen/title_text_size"/>
+
+    <TextView
+        android:id="@+id/total_describe_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/total_describe_body_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/total_describe_pic"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/serial_number_icon"/>
+
+        <TextView
+            android:id="@+id/total_describe_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/total_describe_one"
+            android:textColor="@color/text_edit_color"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/total_describe_body_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/total_describe_body_one"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/serial_number_icon"/>
+
+        <TextView
+            android:id="@+id/total_describe_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/total_describe_two"
+            android:textColor="@color/text_edit_color"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

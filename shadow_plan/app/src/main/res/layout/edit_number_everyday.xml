@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default_color">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/title_text_margin_top"
+        android:text="@string/edit_data"
+        android:textColor="@color/title_text_normal_color"
+        android:textSize="@dimen/title_text_size"/>
+
+    <EditText
+        android:id="@+id/edit_imei"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/title_text"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border"
+        android:hint="@string/edit_imei"
+        android:paddingLeft="11dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/text_edit_color"
+        android:textColorHint="@color/text_hint_color"
+        android:textSize="@dimen/edit_text_size"
+        android:inputType="number"
+        android:textCursorDrawable="@mipmap/text_cursor"
+        android:background="@mipmap/edit_view_normal"/>
+
+    <EditText
+        android:id="@+id/edit_date"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/edit_imei"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border"
+        android:hint="@string/edit_date"
+        android:paddingLeft="11dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/text_edit_color"
+        android:textColorHint="@color/text_hint_color"
+        android:textSize="@dimen/edit_text_size"
+        android:textCursorDrawable="@mipmap/text_cursor"
+        android:background="@mipmap/edit_view_normal"/>
+
+    <EditText
+        android:id="@+id/number_text"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/edit_date"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border"
+        android:hint="@string/edit_single_number"
+        android:paddingLeft="11dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/text_edit_color"
+        android:textColorHint="@color/text_hint_color"
+        android:textSize="@dimen/edit_text_size"
+        android:textCursorDrawable="@mipmap/text_cursor"
+        android:background="@mipmap/edit_view_normal"/>
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/confirm_button_height"
+        android:layout_below="@+id/number_text"
+        android:layout_marginLeft="@dimen/edit_data_margin_border"
+        android:layout_marginRight="@dimen/edit_data_margin_border"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_click_selector"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/text_normal_color"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/share_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/confirm"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/everyday_number"
+            layout="@layout/top_image_with_bottom_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"/>
+
+        <include
+            android:id="@+id/permoblie_number"
+            layout="@layout/top_image_with_bottom_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <include
+            android:id="@+id/total_number"
+            layout="@layout/top_image_with_bottom_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
