@@ -3,6 +3,7 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
@@ -14,10 +15,168 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         jcenter()
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+apply plugin: 'com.android.application'
+
+
+//dependencies {
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    compile 'org.greenrobot:eventbus:3.0.0'
+//    compile fileTree(include: '*.jar', dir: 'libs')
+//    compile project(':WeiboSDK')
+//    compile 'com.android.support:support-v13:24.0.0'
+//    compile 'com.android.support:recyclerview-v7:24.0.0'
+//    compile 'com.android.support:design:24.0.0'
+//    compile 'com.android.support:percent:24.0.0'
+//    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+//    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+//    compile 'com.kevin:pulltorefresh:1.0.8'
+//    compile 'com.google.code.gson:gson:2.7'
+//    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+//    compile 'com.umeng.analytics:analytics:latest.integration'
+//}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        multiDexEnabled true
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        ignoreWarnings true
+        showAll true
+        textReport true
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
+//    signingConfigs {
+//
+//        debug {
+//            storeFile file("release.keystore")
+//            storePassword "android"
+//            keyAlias "release.keystore"
+//            keyPassword "android"
+//        }
+//
+//        release {
+//            storeFile file("release.keystore")
+//            storePassword "android"
+//            keyAlias "release.keystore"
+//            keyPassword "android"
+//        }
+//    }
+
+//    defaultConfig {
+//        multiDexEnabled true
+//    }
+
+//    buildTypes {
+//        debug {
+//            debuggable true
+//            signingConfig signingConfigs.debug
+//        }
+//        release {
+//            signingConfig signingConfigs.release
+//            debuggable false
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+//        }
+//    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'app/src/main/AndroidManifest.xml'
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['app/src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+//
+//    useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        checkReleaseBuilds false
+        ignoreWarnings true
+        showAll true
+        textReport true
+        abortOnError false
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+
+//    buildTypes {
+//        debug {
+//            debuggable true
+//            signingConfig signingConfigs.debug
+//        }
+//        release {
+//            signingConfig signingConfigs.release
+//            debuggable false
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+//        }
+//    }
+//
+//    sourceSets {
+//        main {
+//            manifest.srcFile 'AndroidManifest.xml'
+//            jniLibs.srcDirs = ['libs']
+//            java.srcDirs = ['src']
+//            resources.srcDirs = ['src']
+//            aidl.srcDirs = ['src']
+//            renderscript.srcDirs = ['src']
+//            res.srcDirs = ['res']
+//            assets.srcDirs = ['assets']
+//        }
+//
+//    }
+
+    dexOptions {
+        incremental true
+        preDexLibraries = true
+        jumboMode = false
+        javaMaxHeapSize "2048M"
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/LICENSE.txt'
+//        exclude 'META-INF/NOTICE.txt'
+//    }
+//
+//    productFlavors {
+//        guanwang {}
+//    }
+
+//    productFlavors.all { flavor ->
+//        flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+//    }
+}
+
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}

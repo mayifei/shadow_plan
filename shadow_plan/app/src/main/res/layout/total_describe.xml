@@ -15,7 +15,7 @@
         android:textColor="@color/title_text_normal_color"
         android:textSize="@dimen/title_text_size"/>
 
-    <TextView
+    <ImageView
         android:id="@+id/total_describe_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/serial_number_icon"/>
+            android:background="@mipmap/serial_number_icon_pressed"/>
 
         <TextView
             android:id="@+id/total_describe_one"
@@ -60,7 +60,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/serial_number_icon"/>
+            android:background="@mipmap/serial_number_icon_pressed"/>
 
         <TextView
             android:id="@+id/total_describe_two"

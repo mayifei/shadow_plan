@@ -15,7 +15,7 @@
         android:textColor="@color/title_text_normal_color"
         android:textSize="@dimen/title_text_size"/>
 
-    <TextView
+    <ImageView
         android:id="@+id/permobile_describe_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,9 +32,10 @@
         android:layout_marginRight="@dimen/edit_data_margin_border">
 
         <ImageView
+            android:id="@+id/orderone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/serial_number_icon"/>
+            android:background="@mipmap/serial_number_icon_pressed"/>
 
         <TextView
             android:id="@+id/permobile_describe_one"
@@ -58,9 +59,10 @@
         android:layout_marginRight="@dimen/edit_data_margin_border">
 
         <ImageView
+            android:id="@+id/ordertwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/serial_number_icon"/>
+            android:background="@mipmap/serial_number_icon_pressed"/>
 
         <TextView
             android:id="@+id/permobile_describe_two"
@@ -84,9 +86,10 @@
         android:layout_marginRight="@dimen/edit_data_margin_border">
 
         <ImageView
+            android:id="@+id/orderthree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@mipmap/serial_number_icon"/>
+            android:background="@mipmap/serial_number_icon_pressed"/>
 
         <TextView
             android:id="@+id/permobile_describe_three"
